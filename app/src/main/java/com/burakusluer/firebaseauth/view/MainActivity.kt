@@ -55,7 +55,10 @@ class MainActivity : AppCompatActivity() {
             )
                 .addOnCompleteListener {
                     if (it.isSuccessful) {
-                        // feed activity
+                        activityTraveler(
+                            this@MainActivity,
+                            Intent(this@MainActivity, UrunSatisActivity::class.java)
+                        )
                     } else {
                         it.exception!!.printStackTrace()
                         Toast.makeText(this, it.exception!!.localizedMessage, Toast.LENGTH_LONG)
