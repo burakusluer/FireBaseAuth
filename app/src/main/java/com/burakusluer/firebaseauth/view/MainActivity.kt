@@ -57,7 +57,7 @@ class MainActivity : AppCompatActivity() {
                     if (it.isSuccessful) {
                         activityTraveler(
                             this@MainActivity,
-                            Intent(this@MainActivity, UrunSatisActivity::class.java)
+                            Intent(this@MainActivity, ProductSaleActivity::class.java)
                         )
                     } else {
                         it.exception!!.printStackTrace()
