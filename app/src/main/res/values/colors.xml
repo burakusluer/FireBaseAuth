@@ -3,4 +3,14 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
+
+    <!--Buradan sonra seçme renkler geçerlidir-->
+    <color name="primaryColor">#76ff03</color>
+    <color name="primaryLightColor">#b0ff57</color>
+    <color name="primaryDarkColor">#32cb00</color>
+    <color name="secondaryColor">#7cb342</color>
+    <color name="secondaryLightColor">#aee571</color>
+    <color name="secondaryDarkColor">#4b830d</color>
+    <color name="primaryTextColor">#000000</color>
+    <color name="secondaryTextColor">#000000</color>
 </resources>
