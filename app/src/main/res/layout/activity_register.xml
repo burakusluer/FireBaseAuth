@@ -8,26 +8,32 @@
 
     <EditText
         android:id="@+id/editTextRegisterName"
-        android:layout_width="300dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="152dp"
+        android:layout_marginEnd="55dp"
+        android:elevation="4dp"
         android:ems="10"
         android:hint="User Mail"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/editTextRegisterPass"
-        android:layout_width="300dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="65dp"
+        android:layout_marginEnd="55dp"
+        android:elevation="4dp"
         android:ems="10"
         android:hint="User Password"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextRegisterName" />
 
@@ -35,11 +41,11 @@
         android:id="@+id/buttonRegister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="82dp"
+        android:elevation="4dp"
         android:onClick="Register"
         android:text="Register"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.16"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextRegisterPass" />
 </androidx.constraintlayout.widget.ConstraintLayout>
