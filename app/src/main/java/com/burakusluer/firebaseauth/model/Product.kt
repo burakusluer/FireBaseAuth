@@ -1,11 +1,5 @@
 package com.burakusluer.firebaseauth.model
 
-import java.net.URL
+import android.net.Uri
 
-class Product(id: Int, ad: String, aciklama: String, resimUrl: URL) {
-
-    var id: Int = id
-    var ad: String = ad
-    var aciklama: String = aciklama
-    var resimUrl: URL = resimUrl
-}
+class Product(var id: Int, var ad: String, var aciklama: String, var resimUrl: Uri)

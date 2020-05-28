@@ -1,21 +1,29 @@
 package com.burakusluer.firebaseauth.adapter
 
 import android.app.Activity
+import android.graphics.ImageDecoder
+import android.os.Build
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.burakusluer.firebaseauth.R
 import com.burakusluer.firebaseauth.model.Product
 
 class RecyclerViewAdapterForProducts(
-    activity: Activity,
+    var activity: Activity? = null,
     var array: ArrayList<Product>? = ArrayList<Product>()
 ) :
     RecyclerView.Adapter<RecyclerViewAdapterForProducts.RecyclerViewHolderForProducts>() {
 
 
-    inner class RecyclerViewHolderForProducts(itemView: View) : RecyclerView.ViewHolder(itemView)
+    inner class RecyclerViewHolderForProducts(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        var textViewProductDesc: TextView = itemView.findViewById(R.id.textViewProductDesc)
+        var textViewProductName: TextView = itemView.findViewById(R.id.textViewProductName)
+        var imageViewProduct: ImageView = itemView.findViewById(R.id.imageViewProduct)
+    }
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
@@ -32,7 +40,16 @@ class RecyclerViewAdapterForProducts(
     }
 
     override fun onBindViewHolder(holder: RecyclerViewHolderForProducts, position: Int) {
-        TODO("Not yet implemented")
+        holder.textViewProductName.text = array!![position].ad
+        holder.textViewProductDesc.text = array!![position].aciklama
+        if (Build.VERSION.SDK_INT >= 28 && activity != null)
+            holder.imageViewProduct.setImageBitmap(
+                ImageDecoder.decodeBitmap(
+                    ImageDecoder.createSource(
+                        activity!!.contentResolver, array!![position].resimUrl
+                    )
+                )
+            )
     }
 
 }
