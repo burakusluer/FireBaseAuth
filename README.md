@@ -6,6 +6,6 @@ this project will developed using Kotlin
 ![Kotlin](https://github.com/burakusluer/FireBaseAuth/blob/master/Kotlin-logo.png?raw=true)
 
 #technologies are we using
-*recyclerView
-*firebase(storage,filestore,authentication(only mail))
-*metarial design
+*. recyclerView
+*. firebase(storage,filestore,authentication(only mail))
+*. metarial design

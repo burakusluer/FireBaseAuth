@@ -1,5 +1,6 @@
 package com.burakusluer.firebaseauth.view
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -7,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.burakusluer.firebaseauth.R
+import com.burakusluer.firebaseauth.activityTraveler
 
 class ProductSaleActivity : AppCompatActivity() {
     //region Inıt Area
@@ -31,7 +33,10 @@ class ProductSaleActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
-            R.id.itemAddProductForSale -> return true
+            R.id.itemAddProductForSale -> activityTraveler(
+                this,
+                Intent(this, AddProductActivity::class.java)
+            )
         }
         return super.onOptionsItemSelected(item)
     }

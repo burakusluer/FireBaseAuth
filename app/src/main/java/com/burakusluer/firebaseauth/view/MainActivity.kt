@@ -30,6 +30,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         init()
+        if (fireaseAuth.currentUser != null) {
+            activityTraveler(
+                this@MainActivity,
+                Intent(this@MainActivity, ProductSaleActivity::class.java)
+            )
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

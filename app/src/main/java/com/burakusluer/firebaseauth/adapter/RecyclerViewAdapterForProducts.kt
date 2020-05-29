@@ -2,6 +2,7 @@ package com.burakusluer.firebaseauth.adapter
 
 import android.app.Activity
 import android.graphics.ImageDecoder
+import android.net.Uri
 import android.os.Build
 import android.view.LayoutInflater
 import android.view.View
@@ -46,7 +47,7 @@ class RecyclerViewAdapterForProducts(
             holder.imageViewProduct.setImageBitmap(
                 ImageDecoder.decodeBitmap(
                     ImageDecoder.createSource(
-                        activity!!.contentResolver, array!![position].resimUrl
+                        activity!!.contentResolver, Uri.parse(array!![position].resimUrl)
                     )
                 )
             )

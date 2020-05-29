@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "532179925994-9h2msdai8dp1nfmp5ifi5884n298p6lh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.burakusluer.firebaseauth",
+            "certificate_hash": "7ed8bc0126169b279da1923afb1df0c051a4ed57"
+          }
+        },
+        {
           "client_id": "532179925994-j3msv4admvnt7htsfb5mhqp3me0pd2u9.apps.googleusercontent.com",
           "client_type": 3
         }
